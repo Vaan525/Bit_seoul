@@ -30,7 +30,7 @@ model.compile(loss='mse', optimizer='adam',
 
 model.fit(x, y, epochs=1000, batch_size=1)
     # epochs = 훈련 횟수
-    # batch_size = 몇 개의 샘플로 가중치를 갱신할 것인지 지정
+    # batch_size = 몇 개의 샘플로 가중치를 갱신할 것인지 지정.
 
 # 4. 평가, 예측
 loss, acc = model.evaluate(x, y, batch_size=1)
