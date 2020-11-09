@@ -10,9 +10,9 @@ from tensorflow.keras.layers import Dense
 
 # 2. 모델 구성
 model = Sequential() # 순차적이다.
-model.add(Dense(5, input_dim=1)) # 한개가 입력됬다
+model.add(Dense(3, input_dim=1)) # 한개가 입력됬다
 model.add(Dense(5)) # 다음층에 5개의 요오드가 생성
-model.add(Dense(5))
+model.add(Dense(3))
 model.add(Dense(1)) # 결과 weight
 # 요오드의 갯수와 레이어의 깊이는 AI Developer가 정한다.
 # * Hyper Parameter Tuning *
