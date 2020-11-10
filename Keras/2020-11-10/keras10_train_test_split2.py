@@ -15,7 +15,7 @@ from tensorflow.keras.layers import Dense
 
 # 2. 모델 구성
 model = Sequential()
-model.add(Dense(300, input_dim=1))
+model.add(Dense(300, input_shape=(1, ))) # = 스칼라1개
 model.add(Dense(500))
 model.add(Dense(1200))
 model.add(Dense(500))
@@ -51,6 +51,6 @@ from sklearn.metrics import r2_score
 r2 = r2_score(y_test, y_predict)
 print("R2 : ", r2)
 
-print(x_test)
-print(x_train)
-print(x_val)
+print(x_test.shape) # 스칼라가 20개 
+print(x_train.shape)
+print(x_val.shape)
