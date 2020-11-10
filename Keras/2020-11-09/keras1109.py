@@ -13,8 +13,13 @@ from tensorflow.keras.layers import Dense
 
 # 2. 모델 구성
 model = Sequential() # 순차적이다.
-model.add(Dense(3, input_dim=1)) # 한개가 입력됬다
+# 모델 구성의 시작
+model.add(Dense(3, input_dim=1)) # 한개가 입력됬다 / 입력 도드가 1개
 model.add(Dense(5)) # 다음층에 5개의 요오드가 생성
+# activation을 통해 활성화 함수 선택 가능
+# relu : 마지막 레이어가 아닌 이상 relu를 쓰는데 쓰는 이유는?
+# sigmond : 이진 분류 문제에 사용
+# softmax : 확률 값을 이용해 다양한 클래스를 분류
 model.add(Dense(3))
 model.add(Dense(1)) # 결과 weight
 # 요오드의 갯수와 레이어의 깊이는 AI Developer가 정한다.

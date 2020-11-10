@@ -9,7 +9,8 @@ x = np.transpose(x) # 전치 행렬
 y = np.array([range(101, 201), range(711, 811), range(100)])
 y = np.transpose(y)
 
-
+print(x)
+print(y)
 print(x.shape) # (3, 1) 스칼라가 3개
 print(y.shape) # (3, 100)
 
