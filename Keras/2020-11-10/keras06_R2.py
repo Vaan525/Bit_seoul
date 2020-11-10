@@ -39,10 +39,17 @@ print("결과물 : \n : ", y_predict)
 # 새로운 예측값을 만들어서 아래에서 비교
 # 
 
+# RMSE
 from sklearn.metrics import mean_squared_error
 def RMSE(y_test, y_predict):
     return np.sqrt(mean_squared_error(y_test, y_predict))
 print("RMSE : ", RMSE(y_test, y_predict))
-# 사용자 정의로 작성된 RMSE 
-# RMSE를 사용하면 오류 지표를 실제 값과 유사한 단위로 다시 변환
-# 해석을 쉽게 가능하다. 
+
+# R2
+from sklearn.metrics import r2_score
+r2 = r2_score(y_test, y_predict)
+print("R2 : ", r2)
+# R2 값은 회귀 모델에서 예측의 적합도를 0과 1사이의 값으로 계산
+# 1에 가까울수록 완벽
+
+
