@@ -4,11 +4,13 @@ import numpy as np
 # 1. 데이터
 x_train = np.array([1,2,3,4,5,6,7,8,9,10]) # 테스트 하고싶은 데이터
 y_train = np.array([1,2,3,4,5,6,7,8,9,10])
-x_val = np.array([11,12,13,14,15]) 
+x_val = np.array([11,12,13,14,15])  # 검증용 데이터
 y_val = np.array([11,12,13,14,15]) 
 #x_pred = np.array([16,17,18]) # 예측하고 싶은 데이터
 x_test = np.array([16,17,18,19,20])
 y_test = np.array([16,17,18,19,20])
+
+# train, test, val = 6 : 2 : 2
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -31,10 +33,10 @@ model.fit(x_train, y_train, epochs=100,
 
 # 4. 평가, 예측
 # loss, acc = model.evaluate(x, y)
-loss = model.evaluate(x_test, y_test)
+loss, mse = model.evaluate(x_test, y_test, batch_size=1)
 
 print("loss : ", loss)
-# print("acc : ", acc)
+print("acc : ", mse)
 
 # 4. 예측
 y_predict = model.predict(x_test)
