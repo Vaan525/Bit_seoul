@@ -16,11 +16,11 @@ from tensorflow.keras.layers import Dense
 
 # 2. 모델 구성
 model = Sequential()
-model.add(Dense(20, input_dim=1))
-model.add(Dense(70))
-model.add(Dense(200))
-model.add(Dense(70))
-model.add(Dense(20))
+model.add(Dense(300, input_dim=1))
+model.add(Dense(500))
+model.add(Dense(1200))
+model.add(Dense(500))
+model.add(Dense(300))
 model.add(Dense(1))
 
 
