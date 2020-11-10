@@ -27,6 +27,7 @@ loss, acc = model.evaluate(x, y, batch_size=1)
 print("loss : ", loss)
 print("acc : ", acc)
 
+# 4. 예측
 y_pred = model.predict(x)
 print("결과물 : \n : ", y_pred)
 
